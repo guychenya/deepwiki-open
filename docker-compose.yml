@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - "${PORT:-8001}:${PORT:-8001}"  # API port
-      - "8080:3000"  # Next.js port (remapped to avoid Dokploy dashboard on :3000)
+      - "8090:3000"  # Next.js port (remapped to avoid Dokploy dashboard on :3000 and Roundcube on :8080)
     env_file:
       - .env
     environment:
